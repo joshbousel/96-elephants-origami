@@ -1,19 +1,17 @@
 .origami-hero {	
-	background-color: #c6ecfd;
-	background-image: url('#{$image-path}bg-elephants.jpg');
+	background-color: #d9dadd;
+	background-image: url('#{$image-path}bg-origami-large.jpg');
 	background-position: left bottom;
 	background-repeat: no-repeat;
 	background-size: 100% auto;
-	padding: 0 0 40%;
+	padding: 0 0 26%;
 	
 	@media all and (max-width:$break-tablet) {
-		background-image: url('#{$image-path}bg-elephants-med.jpg');
-		padding: 0 0 39%;
+		background-image: url('#{$image-path}bg-origami-med.jpg');
 	}
 	
 	@media all and (max-width:$break-mobile) {
-		background-image: url('#{$image-path}bg-elephants-small.jpg');
-		padding: 0 0 36%;
+		background-image: url('#{$image-path}bg-origami-small.jpg');
 	}
 }
 
