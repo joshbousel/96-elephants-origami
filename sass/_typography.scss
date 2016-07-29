@@ -1,0 +1,134 @@
+.origami-body-text {
+	color: $dark-brown;
+	font-family: $font-merriam;
+	font-size: 1.125rem;
+	line-height: 1.875rem;
+	
+	@media all and (max-width:$break-desktop) {
+		font-size: 1rem;
+		line-height: 1.65rem;
+	}
+	
+	a {
+		color: $red;
+		transition: $default-transition;
+		
+		&:hover {
+			color: #f60e15;
+		}
+	}
+	
+	&--error {
+		color: $red;
+	}
+	
+	&--small-type {
+		color: #BDBAB6;
+		font-size: .75rem;
+		line-height: 1rem;
+		
+		a {
+			color: #BDBAB6;
+			text-decoration: underline;
+			
+			&:hover {
+				color: #aba398;
+			}
+		}
+	}
+}
+
+.origami-header {
+	color: $dark-blue;
+	font-family: $font-akzidenz;
+	font-size: 5.625rem;
+	line-height: 4.5625rem;
+	text-transform: uppercase;
+	transition: $default-transition;
+	
+	&--has-logo {
+		&::before {
+		    color: $red;
+		    content: "\e00d";
+		    display: block;
+		    font-family: icons;
+		    font-size: 36px;
+		    font-style: normal;
+		    font-weight: normal;
+		    line-height: 1;
+		    margin-bottom: 15px;
+		    speak: none;
+		    text-align: center;
+		    text-transform: none;
+			-webkit-font-smoothing: antialiased;
+		}
+	}
+	
+	&__trademark {
+		font-size: 2.1875rem;
+		line-height: 2.1875rem;
+		position: relative;
+		top: -39px;
+		
+		@media all and (max-width:$break-desktop) {
+			top: -21px;
+		}
+		
+		@media all and (max-width:$break-mobile) {
+			font-size: 1.5rem;
+			line-height: 1.5rem;
+			top: -17px;
+		}
+	}
+	
+	@media all and (max-width:$break-desktop) {
+		font-size: 4rem;
+		line-height: 3.125rem;
+	}
+	
+	@media all and (max-width:$break-mobile) {
+		font-size: 3rem;
+		line-height: 2.5rem;
+	}
+}
+
+.origami-sub-header {
+	color: $dark-blue;
+	font-family: $font-akzidenz;
+	font-size: 3.15rem;
+	line-height: 2.625rem;
+	text-transform: uppercase;
+	transition: $default-transition;
+	
+	@media all and (max-width:$break-desktop) {
+		font-size: 2.5rem;
+		line-height: 2rem;
+	}
+	
+	&--light-blue {
+		color: $light-blue;	
+	}
+	
+	&--red {
+		color: $red;	
+	}
+	
+	&--smaller {
+		font-size: 2.3125rem;
+		line-height: 2.3125rem;
+		
+		@media all and (max-width:$break-desktop) {
+			font-size: 1.75rem;
+			line-height: 1.65rem;
+		}
+	}
+}
+
+.wf-loading {
+ 	.origami-button,
+ 	.origami-content__pose-nav__item,
+ 	.origami-header,
+ 	.origami-sub-header {
+	 	visibility: hidden;
+ 	}
+}

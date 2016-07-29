@@ -1,0 +1,110 @@
+.origami-lightbox {
+	background-color: #fff;
+	background-image: url('#{$image-path}bg-paper.png');
+	left: 50%;
+	margin: 0 0 0 -30%;
+	max-height: 90%;
+	opacity: 0;
+	overflow: auto;
+	padding: 45px;
+	position: fixed;
+	text-align: center;
+	transition: all 0.35s ease-out;
+	top: 5%;
+	width: 60%;
+	visibility: hidden;
+	z-index: 1001;
+	
+	@media all and (max-width:$break-desktop) {
+		margin: 0 0 0 -40%;
+		width: 80%;
+	}
+	
+	@media all and (max-width:$break-tablet) {
+		margin: 0 0 0 -45%;
+		max-height: 95%;
+		top: 2.5%;
+		width: 90%;
+	}
+	
+	.origami-body-text {
+		margin: 0 0 25px;
+		text-align: left;
+	}
+	
+	.origami-header {
+		font-size: 3.5rem;
+		line-height: 3rem;
+		margin: 0 0 25px;
+	}
+	
+	.origami-sub-header {
+		font-size: 2.75rem;
+		line-height: 2.15rem;
+		margin: 0 0 15px;
+		text-align: left;
+	}
+	
+	.origami-list__item {
+		margin: 25px 0 0 25px;
+	}
+}
+
+.origami-lightbox__close-button {
+	border-radius: 0;
+	left: 50%;
+	margin: 0 0 0 calc(30% - 45px);
+	right: -1px;
+	padding: 5px;
+	position: fixed;
+	top: 5%;
+	z-index: 1002;
+	
+	@media all and (max-width:$break-desktop) {
+		margin: 0 0 0 calc(40% - 45px);
+	}
+	
+	@media all and (max-width:$break-tablet) {
+		margin: 0 0 0 calc(45% - 45px);
+		top: 2.5%;
+	}
+	
+	&__icon {
+		display: block;
+		fill: #fff;
+		height: 35px;
+		width: 35px;
+	}
+}
+
+.origami-lightbox__content {
+	display: none;
+	
+	&--active {
+		display: block;
+	}
+}
+
+.origami-lightbox-visible {	
+	.origami-lightbox {
+		opacity: 1;
+		visibility: visible;
+	}
+	
+	.origami-screen {
+		opacity: .35;
+		visibility: visible;
+	}
+}
+
+.origami-screen {
+	background-color: #000;
+	height: 100%;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	transition: all 0.2s ease-out;
+	width: 100%;
+	visibility: hidden;
+	z-index: 1000;
+}

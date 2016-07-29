@@ -1,0 +1,23 @@
+.origami-list {
+	margin: 0 0 10px;
+	
+	ol {
+		.origami-list__item {
+			list-style-type: decimal;
+			list-style-position: inside;
+			padding: 0 0 10px;
+		}
+	}
+	
+	ul {
+		.origami-list__item {
+			list-style-type: disc;
+			list-style-position: inside;
+			padding: 0 0 10px;
+		}
+	}
+	
+	&__item {
+		@extend .origami-body-text;
+	}
+}

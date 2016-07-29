@@ -1,0 +1,59 @@
+.origami-partners {
+	background-image: url('#{$image-path}bg-cardboard.jpg');
+	padding: 50px 0;
+	text-align: center;
+	
+	&__container {
+		margin: 0 auto;
+		max-width: 700px;
+	}
+	
+	.origami-header {
+		color: #fff;
+	}
+}
+
+.origami-partners__group {
+	margin: 30px 0 0;
+	
+	@media all and (max-width:$break-tablet) {
+		margin: 30px 0 0;
+	}
+	
+	&--are-featured {
+		.origami-partners__group__logo {
+			@media all and (max-width:$break-tablet) {
+				height: 30px;
+				width: auto;
+			}
+		}	
+	}
+	
+	&__logo {
+		margin: 0 35px 30px;
+		
+		@media all and (max-width:$break-tablet) {
+			height: 75px;
+			margin: 0 25px 15px;
+			width: auto;
+		}
+	}
+	
+	&__partner {
+		color: #3c2e13;
+		display: inline-block;
+		font-size: 1.5rem;
+		line-height: 2rem;
+		margin: 0 15px 30px;
+		width: calc(33% - 30px);
+		
+		@media all and (max-width:$break-tablet) {
+			width: calc(49% - 30px);
+		}
+		
+		@media all and (max-width:$break-mobile) {
+			font-size: 1.125rem;
+			line-height: 1.5rem;
+		}
+	}
+}

@@ -1,0 +1,59 @@
+.origami-input {
+	appearance: none;
+	background: #fff;
+    border: 2px solid #bdd4e1;
+	border-radius: 2px;
+	color: $dark-brown;
+	font-family: $font-merriam;
+	font-size: 1.25rem;
+	line-height: 1.25rem;
+	padding: 14px 18px 9px;
+	transition: $default-transition;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	
+	&--error {
+		border: 2px solid $red;	
+	}
+	
+	&--is-checkbox {
+		background-position: center center;
+		background-repeat: no-repeat;
+	    display: inline-block;
+		height: 22px;
+		margin: 0 10px 0 0;
+		padding: 0;
+		width: 22px;
+		vertical-align: top;
+		
+		&:checked {
+			background-image: url('#{$image-path}check.png');
+		}
+	}
+	
+	
+	&--is-dropdown {
+		background-image: url('#{$image-path}arrow-down.png');
+		background-position: right 10px top 50%;
+		background-repeat: no-repeat;
+	}
+	
+	&--is-radio {
+		@extend .origami-input--is-checkbox;
+	    border-radius: 50%;
+	    
+	    &:checked {
+			background-image: url('#{$image-path}radio-circle.png');
+		}
+	}
+	
+	&::-webkit-input-placeholder,
+	&--placeholder {
+		color: #b5b4b2;	
+	}
+	
+	&:focus {
+		border: 2px solid $dark-blue;
+		outline: none;
+	}
+}

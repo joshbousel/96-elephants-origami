@@ -1,0 +1,18 @@
+.origami-callout {
+	background-color: #fff;
+    background-image: url("#{$image-path}bg-paper.png");
+    text-align: center;
+    
+   &__text {
+	    color: $dark-brown;
+	    font-size: 1.125rem;
+	    padding: 8px 0;
+    }
+    
+    .origami-button {
+	    display: inline-block;
+        font-size: 1.75rem;
+	    margin: 0 0 20px;
+	    padding: 5px 12px;
+    }
+}

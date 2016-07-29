@@ -1,0 +1,22 @@
+$image-path: '../images/';
+
+/* Colors */
+$dark-blue: #216288;
+$dark-brown: #514c47;
+$light-blue: #4cb8c2;
+$red: #c12e32;
+
+/* Breakpoints */
+$break-desktop: 1200px;
+$break-tablet: 720px;
+$break-mobile: 500px;
+$break-small-mobile: 375px;
+
+/* Fonts */
+$fallbacks-sans: helvetica, arial, sans-serif;
+$fallbacks-serif: georgia, 'times new roman', serif;
+$font-merriam: 'merriam', $fallbacks-serif;
+$font-akzidenz: 'akzidenz-grotesk-condensed', $fallbacks-sans;
+
+/* Transition */
+$default-transition: all 0.1s ease-out;

@@ -1,0 +1,38 @@
+.menu__wcs-logo {
+	right: 115px;
+}
+
+.origami-button--menu-donate {
+	border-radius: 0;	
+	box-shadow: 1px 1px 1px rgba(0,0,0,.35);
+	font-size: 1.5rem;
+	line-height: 1.35rem;
+	max-width: 75px;
+	padding: 5px 5px 10px;
+	position: absolute;
+    right: 20px;
+    text-align: center;
+    top: -65px;
+    
+    @media all and (max-width:$break-tablet) {
+		display: none;
+	}
+    
+    .origami-button__action {
+	    &:before {
+		    color: #000;
+		    content: "\e00d";
+		    display: block;
+		    font-family: icons;
+		    font-size: 36px;
+		    font-style: normal;
+		    font-weight: normal;
+		    line-height: 1;
+		    margin: 5px 0 10px;
+		    speak: none;
+		    text-align: center;
+		    text-transform: none;
+			-webkit-font-smoothing: antialiased;
+		}
+    }
+}
