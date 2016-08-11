@@ -132,3 +132,15 @@
 	 	visibility: hidden;
  	}
 }
+.origami-supporting-partners-text {
+	color: $dark-brown;
+	font-family: $font-merriam;
+	font-size: 1.5rem;
+	line-height: 1.875rem;
+	padding-bottom:20px;
+	
+	@media all and (max-width:$break-desktop) {
+		font-size: 1.4rem;
+		line-height: 1.65rem;
+	}	
+}
