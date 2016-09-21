@@ -1,16 +1,18 @@
 .origami-input {
 	appearance: none;
 	background: #fff;
-    border: 2px solid #bdd4e1;
+    border: none;
 	border-radius: 2px;
 	color: $dark-brown;
 	font-family: $font-merriam;
-	font-size: 1.25rem;
+	font-size: 1rem;
 	line-height: 1.25rem;
-	padding: 14px 18px 9px;
+	padding: 16px 70px 9px 15px;
 	transition: $default-transition;
 	-webkit-appearance: none;
 	-moz-appearance: none;
+	margin-right: 10px;
+	vertical-align: middle;
 	
 	&--error {
 		border: 2px solid $red;	
@@ -56,4 +58,7 @@
 		border: 2px solid $dark-blue;
 		outline: none;
 	}
+}
+.origami-signup {
+	padding-top: 2%;
 }

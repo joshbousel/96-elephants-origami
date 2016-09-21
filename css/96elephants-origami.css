@@ -9,16 +9,18 @@
   cursor: pointer;
   cursor: hand;
   font-family: "akzidenz-grotesk-condensed", helvetica, arial, sans-serif;
-  font-size: 2.1875rem;
+  font-size: 1.3rem;
   line-height: 2.1875rem;
-  padding: 10px 30px;
+  padding: 4px 35px;
   text-transform: uppercase;
-  transition: none !important; }
+  transition: none !important;
+  vertical-align: middle; }
   @media all and (max-width: 500px) {
     .origami-button {
       font-size: 1.85rem;
       line-height: 1.85rem;
-      padding: 7px 20px; } }
+      padding: 7px 20px;
+      margin-top: 5%; } }
   .origami-button:hover {
     background-image: url("../assets/textures/cardboard--full-b9634961afe2722bd45c2987b63261b1.jpg"); }
   .origami-button--has-icon .origami-button__icon {
@@ -50,7 +52,7 @@
   text-align: center; }
   .origami-content__container {
     margin: 0 auto;
-    max-width: 720px; }
+    max-width: 825px; }
     @media all and (max-width: 720px) {
       .origami-content__container {
         max-width: 85%; } }
@@ -60,7 +62,7 @@
     padding: 50px 0 0; }
   .origami-content .origami-body-text, .origami-content .origami-content__support__item__text, .origami-content .origami-list__item {
     margin: 0 auto;
-    max-width: 620px;
+    max-width: 825px;
     padding: 0 0 35px; }
     .origami-content .origami-body-text--compact-padding {
       padding: 0 0 15px; }
@@ -204,19 +206,60 @@
     visibility: visible; }
   100% {
     visibility: hidden; } }
+.origami-collage-section {
+  background-color: #ffffff; }
+
+.origami-collage {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: bottom;
+  width: 100%; }
+
+.origami-collage-images {
+  width: 33.3%;
+  height: auto; }
+
+.origami-challenge-stories {
+  display: inline-flex;
+  max-width: 825px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white; }
+  @media all and (max-width: 720px) {
+    .origami-challenge-stories {
+      display: block;
+      max-width: 85%; } }
+
+.origami-challenge-stories-left img {
+  display: block;
+  max-width: 412px;
+  height: auto; }
+  @media all and (max-width: 720px) {
+    .origami-challenge-stories-left img {
+      display: block;
+      max-width: 85%;
+      padding-top: 5%;
+      margin-left: auto;
+      margin-right: auto; } }
+
+.origami-challenge-stories-right {
+  padding: 5% 7%; }
+
 .origami-input {
   appearance: none;
   background: #fff;
-  border: 2px solid #bdd4e1;
+  border: none;
   border-radius: 2px;
   color: #514c47;
   font-family: "merriam", georgia, "times new roman", serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.25rem;
-  padding: 14px 18px 9px;
+  padding: 16px 70px 9px 15px;
   transition: all 0.1s ease-out;
   -webkit-appearance: none;
-  -moz-appearance: none; }
+  -moz-appearance: none;
+  margin-right: 10px;
+  vertical-align: middle; }
   .origami-input--error {
     border: 2px solid #c12e32; }
   .origami-input--is-checkbox, .origami-input--is-radio {
@@ -243,6 +286,9 @@
   .origami-input:focus {
     border: 2px solid #216288;
     outline: none; }
+
+.origami-signup {
+  padding-top: 2%; }
 
 .menu__wcs-logo {
   right: 115px; }
@@ -617,5 +663,34 @@ html {
     .origami-supporting-partners-text {
       font-size: 1.4rem;
       line-height: 1.65rem; } }
+
+.origami-challenge-section {
+  color: #ab9067; }
+
+.origami-collage-text {
+  text-align: center;
+  padding: 2% 0;
+  font-size: 2.2rem; }
+
+.origami-challenge-stories-text {
+  font-size: .95rem;
+  text-align: left;
+  color: #514c47; }
+  .origami-challenge-stories-text--red {
+    color: #c12e32;
+    text-transform: uppercase;
+    padding-bottom: 2%; }
+
+.origami-stories-text {
+  color: #514c47;
+  font-family: "merriam", georgia, "times new roman", serif;
+  font-size: 1.125rem;
+  line-height: 1.875rem; }
+  .origami-stories-text--red {
+    color: #c12e32;
+    text-transform: uppercase;
+    padding-top: 2%;
+    font-size: 1.3rem;
+    width: 98%; }
 
 /*# sourceMappingURL=96elephants-origami.css.map */

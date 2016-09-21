@@ -144,3 +144,37 @@
 		line-height: 1.65rem;
 	}	
 }
+.origami-challenge-section{
+		color: #ab9067;
+
+}
+.origami-collage-text{
+		text-align: center;
+		padding: 2% 0;
+		font-size: 2.2rem;
+}
+.origami-challenge-stories-text{
+		font-size: .95rem;
+		text-align: left;
+		color: $dark-brown;
+		
+		&--red{
+			color: $red;
+			text-transform: uppercase;
+			padding-bottom: 2%;
+		}
+}
+.origami-stories-text{
+		color: $dark-brown;
+		font-family: $font-merriam;
+		font-size: 1.125rem;
+		line-height: 1.875rem;
+		
+		&--red{
+			color: $red;
+			text-transform: uppercase;
+			padding-top: 2%;
+			font-size: 1.3rem;
+			width: 98%;
+		}
+}
