@@ -314,6 +314,8 @@
         max-width: 85%; } }
   .origami-hero__content .origami-body-text, .origami-hero__content .origami-content__support__item__text, .origami-hero__content .origami-list__item {
     margin: 0 0 30px; }
+    .origami-hero__content .origami-body-text--no-margin {
+      margin: 0; }
   .origami-hero__content .origami-header {
     margin: 0 0 10px; }
     @media all and (max-width: 720px) {
