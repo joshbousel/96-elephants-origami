@@ -1,8 +1,15 @@
+body{
+	@media all and (max-width:$break-mobile) {
+			height: auto;
+		}
+}
 .origami-content {
 	background-color: #fff;
 	background-image: url('#{$image-path}bg-paper.png');
 	padding: 50px 0;
 	text-align: center;
+	position: relative;
+	top: 40%;
 	
 	&__container {
 		margin: 0 auto;
@@ -56,6 +63,8 @@
 			 @media all and (max-width:$break-tablet) {
 				padding: 30px 0 20px 0;
 			}
+			
+			
 		}
 	}
 }
