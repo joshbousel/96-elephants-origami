@@ -162,6 +162,12 @@
 			color: $red;
 			text-transform: uppercase;
 			padding-bottom: 2%;
+			padding-top: 10%;
+
+			 	@media all and (max-width:$break-tablet) {
+					padding-top: 2%;
+				
+	}
 		}
 }
 .origami-stories-text{

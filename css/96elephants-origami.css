@@ -679,7 +679,11 @@ html {
   .origami-challenge-stories-text--red {
     color: #c12e32;
     text-transform: uppercase;
-    padding-bottom: 2%; }
+    padding-bottom: 2%;
+    padding-top: 10%; }
+    @media all and (max-width: 720px) {
+      .origami-challenge-stories-text--red {
+        padding-top: 2%; } }
 
 .origami-stories-text {
   color: #514c47;
