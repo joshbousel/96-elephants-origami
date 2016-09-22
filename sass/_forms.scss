@@ -1,13 +1,28 @@
+.origami-form {
+	&__panel {
+		height: 0;
+		opacity: 0;
+		transition: all 0.2s ease-out;
+		visibility: hidden;
+	}
+	
+	&__panel--active {
+		height: auto;
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
 .origami-input {
 	appearance: none;
 	background: #fff;
-    border: none;
+    border: 2px solid #d0cecc;
 	border-radius: 2px;
 	color: $dark-brown;
 	font-family: $font-merriam;
-	font-size: 1rem;
+	font-size: 1.25rem;
 	line-height: 1.25rem;
-	padding: 16px 70px 9px 15px;
+	padding: 14px 18px 9px;
 	transition: $default-transition;
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -55,10 +70,11 @@
 	}
 	
 	&:focus {
-		border: 2px solid $dark-blue;
+		border: 2px solid #ada7a3;
 		outline: none;
 	}
 }
+
 .origami-signup {
-	padding-top: 2%;
+	margin: 10px 0 40px;
 }
