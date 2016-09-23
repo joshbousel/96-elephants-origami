@@ -3,11 +3,11 @@ $(function(){
 	var donationLevelId;
 	
 	// Scroll from hero to start of challenge
-	$('.yoga-hero .yoga-button').not('.yoga-form__panel .yoga-button').on('click touchend',function(e){
+	$('.origami-hero #challenge-button').not('.origami-form__panel .origami-button').on('click touchend',function(e){
 		e.preventDefault();
 		
-		var offset = $('.yoga-content--challenge').offset();
-		$('html, body').animate({ scrollTop: offset.top }, 250);
+		var offset = $('#challenge-updates').offset();
+		$('html, body').animate({ scrollTop: offset.top }, 500);
 	});
 	
 	// Scroll to supporters section

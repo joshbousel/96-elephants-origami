@@ -347,20 +347,21 @@
     -webkit-font-smoothing: antialiased; }
 
 .origami-hero {
+  position: relative;
   background-color: #fff;
   background-image: url(../images/cream_paper.jpg);
-  background-position: left bottom;
-  padding: 18% 0 18%; }
-  @media all and (max-width: 720px) {
-    .origami-hero {
-      padding: 15% 0 15%; } }
-  @media all and (max-width: 500px) {
-    .origami-hero {
-      background-image: url("../images/bg-origami-small.jpg");
-      padding: 0 0 25%;
-      background-repeat: no-repeat;
-      background-color: #d9dadd;
-      background-size: 100% auto; } }
+  background-position: left bottom; }
+  .origami-hero:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 56.25%; }
+  .origami-hero > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
 
 .origami-hero__content {
   margin: 0 auto;
@@ -432,43 +433,51 @@
     content: ""; } }
 .frame {
   width: 100%;
-  height: 58%;
+  height: 100%;
   position: absolute;
   top: 0; }
-  @media all and (max-width: 1200px) {
-    .frame {
-      height: 45%; } }
-  @media all and (max-width: 720px) {
-    .frame {
-      height: 45%; } }
-  @media all and (max-width: 500px) {
-    .frame {
-      display: none;
-      top: 6%; } }
 
 .origami-hero-text {
   z-index: 10;
   position: absolute;
-  top: 11%;
+  top: 25%;
   text-align: center;
   width: 100%; }
-  .origami-hero-text h1, .origami-hero-text h2, .origami-hero-text h3, .origami-hero-text p {
+  .origami-hero-text h1, .origami-hero-text h2, .origami-hero-text h3 {
     color: #fff;
     padding-bottom: 2%; }
-    @media all and (max-width: 500px) {
-      .origami-hero-text h1, .origami-hero-text h2, .origami-hero-text h3, .origami-hero-text p {
-        color: #514c47; } }
-  @media all and (max-width: 720px) {
-    .origami-hero-text {
-      top: 8%; } }
+    @media all and (max-width: 375px) {
+      .origami-hero-text h1, .origami-hero-text h2, .origami-hero-text h3 {
+        font-size: 1.3rem;
+        padding-bottom: 0;
+        padding-top: 0;
+        line-height: 1.5; } }
+  .origami-hero-text p {
+    color: #fff;
+    padding-bottom: 2%; }
+    @media all and (max-width: 375px) {
+      .origami-hero-text p {
+        font-size: .8rem;
+        padding-bottom: 0;
+        padding-top: 0;
+        line-height: 1.5; } }
   @media all and (max-width: 500px) {
     .origami-hero-text {
-      position: relative;
       padding-top: 5%;
       padding-bottom: 5%;
       width: 95%;
       margin-left: auto;
-      margin-right: auto; } }
+      margin-right: auto;
+      top: 1%; } }
+  @media all and (max-width: 375px) {
+    .origami-hero-text {
+      padding-top: 7%; } }
+
+#challenge-button {
+  font-size: 1.8rem; }
+  @media all and (max-width: 1200px) {
+    #challenge-button {
+      display: none; } }
 
 .origami-lightbox {
   background-color: #fff;
