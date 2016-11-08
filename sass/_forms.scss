@@ -2,6 +2,7 @@
 	&__panel {
 		height: 0;
 		opacity: 0;
+		overflow: hidden;
 		transition: all 0.2s ease-out;
 		visibility: hidden;
 	}
