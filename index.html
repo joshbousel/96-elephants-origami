@@ -14,6 +14,7 @@
 		<script src="assets/feature-detection-fc7e245daf56b5006821ebf865d89d45.js"></script>
 		<script src="https://use.typekit.net/pqo6eww.js"></script>
 		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+		<script async src="https://www.youtube.com/iframe_api"></script>
 		<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
 		<script src="js/main.js" type="text/javascript"></script>
 		<script>
@@ -128,86 +129,87 @@
 			</nav>
 		</header>
 		
-		<section class="origami-hero">
-			<div>
-			<iframe class="frame" src="https://player.vimeo.com/video/183339353?background=1&autoplay=1&loop=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-			<div class="origami-hero-text">
-			<h2 class="origami-header">Thank you for folding!</h2>
-			<h3 class="origami-sub-header origami-sub-header--red">(Wow we have a lot of counting to do.)</h3>
-			<p class="origami-body-text origami-body-text--no-margin">You did so much great work, we’re going to need a little time to process it.</p> 
-			<p class="origami-body-text">The official count will be held on Nov. 17.</p>
-			<a id="challenge-button" class="origami-button" href="#challenge-updates">GET UPDATES</a>
-	</div>
-
-			</div>
-		</section>
-
-		<section class="origami-content origami-content--has-cream-paper-bg">
-			<div id="challenge-updates"class="origami-content__container">
-				<h3 class="origami-sub-header  origami-header--has-logo origami-challenge-section">#elephantorigamichallenge</h3>
-				<p class="origami-body-text">Woohoo! Your response to our call to break the Guinness World Records™ title for the largest display of origami elephants was incredible.</p>
-				<p class="origami-body-text">The amazing stories you shared with us along the way have also truly taken us aback. While we count, we want to share some of them with you.</p>	
-			
-			<div class="origami-signup">
-				<div class="origami-form__panel origami-form__panel--first origami-form__panel--active">
-					<p class="origami-stories-text origami-stories-text--red">Sign up to get regular updates leading up to Nov. 17.</p>
-					<p class="origami-body-text origami-body-text--error"></p>
-					<input class="origami-input" name="email" id="email" type="text" placeholder="Email" /><span id="email-error">&nbsp;</span><button id="stories-submit" class="origami-button">STAY IN THE LOOP</button>
-				</div>
-				<div class="origami-form__panel origami-form__panel--second">
-					<p class="origami-body-text origami-stories-text--red">Thank you for signing up!</p>
-					<p class="origami-body-text">The response to the Elephant Origami Challenge has been overwhelming and inspiring. We can’t wait to share some of the great stories we received.</p>
-					<p class="origami-body-text">Keep an eye on your inbox!</p>
+		<section class="origami-content">
+			<div class="origami-content__video">
+				<div class="origami-content__video__frame">
+					<iframe id="exhibitVideo" class="origami-content__video__frame" src="https://www.youtube.com/embed/QjqGlLVIAtg?autoplay=1&controls=0&loop=1&modestbranding=1&enablejsapi=1&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</div>
 			<div class="origami-content__container">
-				<h3 class="origami-sub-header origami-challenge-section">One of Our Favorite Stories</h3>
-			</div>			
-			<div class="origami-challenge-stories">
-					<div class="origami-challenge-stories-left"><img src="images/Elephant-Origami-109-year-old-Artist.jpg"></div>
-
-					<div class="origami-challenge-stories-right">
-						<p class="origami-challenge-stories-text origami-challenge-stories-text--red">Just A Number</p>
-						<p class="origami-challenge-stories-text">At 109, Opal Goode is very likely our oldest contributor. She was born, according to the note that accompanied her origami, in Native American territory five months before it became Oklahoma. “She says that makes her older than dirt,” her friend wrote us, “with the memory of an elephant.”</p></div>
+				<h1 class="origami-header">Join the Fold</h1>
+				<div class="origami-form__panel origami-form__panel--first origami-form__panel--active">
+					<div class="origami-content__container__video">
+						<iframe class="origami-content__container__video__frame" id="introVideo" src="https://www.youtube.com/embed/BAEvpADvUcs?controls=0&loop=1&modestbranding=1&enablejsapi=1&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+					</div>
+					<p class="origami-body-text">We just broke the Guinness World Record for largest display of origami elephants!</p>
+					<p class="origami-body-text">Together, we folded 96,000 paper elephants, which represents the number of elephants who will die in only 3 years if we don’t act now.</p>
+					<p class="origami-body-text">Enter you email to pledge to protect elephants and get your own virtual origami elephant to share.</p>
+					<p class="origami-body-text origami-body-text--error origami-hidden"></p>
+					<p class="origami-body-text"><input type="text" id="email" class="origami-input" placeholder="Email"></p>
+					<p class="origami-body-text"><a class="origami-button">Create My Elephant</a></p>
+				</div>
+				<div class="origami-form__panel origami-form__panel--second">
+					<p class="origami-body-text">Customize your origami elephant.</p>
+					<p class="origami-body-text origami-body-text--error origami-hidden"></p>
+					<p class="origami-body-text">Select a color</p>
+					<ul class="origami-paper-list">
+						<li class="origami-paper-list__item origami-paper-list__item--red" data-color="red"></li>
+						<li class="origami-paper-list__item origami-paper-list__item--green" data-color="green"></li>
+						<li class="origami-paper-list__item origami-paper-list__item--blue" data-color="blue"></li>
+					</ul>
+					<p class="origami-body-text">
+						<label class="origami-form-label">Your Elephant's Name</label>
+						<input type="text" id="elephant" class="origami-input">
+					</p>
+					<p class="origami-body-text">
+						<label class="origami-form-label">Your First Name</label>
+						<input type="text" id="first" class="origami-input">
+					</p>
+					<p class="origami-body-text">
+						<label class="origami-form-label">Your Last Name</label>
+						<input type="text" id="last" class="origami-input">
+					</p>
+					<p class="origami-body-text"><a class="origami-button">Fold My Elephant</a></p>
+				</div>
+				<div class="origami-form__panel origami-form__panel--third">
+					<p class="origami-body-text">Please wait while we fold your elephant...</p>
+					<div class="origami-content__container__video">
+						<iframe class="origami-content__container__video__frame" id="foldingVideo" src="https://www.youtube.com/embed/BAEvpADvUcs?&controls=0&&modestbranding=1&enablejsapi=1&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+					</div>
+					<p class="origami-body-text"><a href="#" class="origami-skip-video">Skip</a></p>
+				</div>
+				<div class="origami-form__panel origami-form__panel--fourth">
+					<p class="origami-body-text">Thanks for joining the fold! Share your elephant today and ask your friends to join the fold and protect one too.</p>
+					<p class="origami-body-text">
+						<a href="#" class="origami-button origami-button--is-social origami-share--facebook" target="_blank">
+							<svg class="origami-button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.97 96.12">
+								<path d="M72.09,0,59.62,0c-14,0-23.05,9.28-23.05,23.66V34.56H24a2,2,0,0,0-2,2v15.8a2,2,0,0,0,2,2H36.57V94.16a2,2,0,0,0,2,2H54.88a2,2,0,0,0,2-2V54.29H71.5a2,2,0,0,0,2-2V36.52a2,2,0,0,0-2-2H56.84V25.32c0-4.44,1.06-6.7,6.85-6.7h8.4a2,2,0,0,0,2-2V2A2,2,0,0,0,72.09,0Z" transform="translate(-22.08)"/>
+							</svg>
+						</a>
+						<a href="#" class="origami-button origami-button--is-social" target="_blank">
+							<svg class="origami-button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+								<path class="cls-1" d="M32,6.33a13.11,13.11,0,0,1-3.77,1,6.59,6.59,0,0,0,2.89-3.63,13.23,13.23,0,0,1-4.17,1.59,6.57,6.57,0,0,0-11.19,6A18.64,18.64,0,0,1,2.23,4.45a6.57,6.57,0,0,0,2,8.76,6.57,6.57,0,0,1-3-.82v.08a6.57,6.57,0,0,0,5.27,6.44,6.65,6.65,0,0,1-1.73.23A6.3,6.3,0,0,1,3.59,19a6.57,6.57,0,0,0,6.13,4.56,13.17,13.17,0,0,1-8.15,2.81A14,14,0,0,1,0,26.29a18.56,18.56,0,0,0,10.06,3c12.08,0,18.68-10,18.68-18.68l0-.85A13.11,13.11,0,0,0,32,6.33Z"/>
+							</svg>
+						</a>
+						<a href="#" class="origami-button origami-button--is-social" target="_blank">
+							<svg class="origami-button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+								<path class="cls-1" d="M16,20.14l-4-3.47L.72,26.38A2.32,2.32,0,0,0,2.3,27H29.7a2.3,2.3,0,0,0,1.57-.62L20,16.68Z"/><path class="cls-1" d="M31.28,4.76a2.3,2.3,0,0,0-1.58-.62H2.3a2.29,2.29,0,0,0-1.57.62L16,17.86Z"/><polygon class="cls-1" points="0 6.15 0 25.14 11.05 15.75 0 6.15"/><polygon class="cls-1" points="20.95 15.75 32 25.14 32 6.14 20.95 15.75"/>
+							</svg>
+						</a>
+					</p>
+					<p class="origami-body-text">
+						<a class="origami-share--facebook" href="#">
+							<img src="http://iwizz4823.imagewizz.com/A010B7C58D4E97300D427E25103A0354/Elephant" class="origami-share--image">
+						</a>
+					</p>
+					<div class="origami-content__container__donate">
+						<p class="origami-body-text">Help secure a future for elephants by donating $5 today</p>
+						<p class="origami-body-text"><a href="https://secure3.convio.net/wcs/site/Donation2?df_id=10982&mfc_pref=T&10982.donation=form1" class="origami-button" target="_blank">Donate $5 Now</a></p>
+					</div>
+				</div>
 			</div>
-			</div>
-		</section>	
-		<section class="origami-collage-section">
-				<div class="origami-collage">
-					<img class="origami-collage-images" src="images/96E-Origami-Submissions-Austria-2016.jpg" >
-					<img class="origami-collage-images" src="images/96E-Origami-Submissions-Australia-2016.jpg">
-					<img class="origami-collage-images" src="images/96E-Origami-Submissions-UK-2016.jpg">
-				</div>
-				<div>
-					<h3 class="origami-sub-header origami-sub-header--red origami-collage-text">we received beautiful elephants from over 40 u.s. states and more than 30 countries</h3>
-				</div>
-				<div class="origami-collage">
-					<img class="origami-collage-images" src="images/96E-Origami-Submissions-France-2016.jpg">
-					<img class="origami-collage-images" src="images/Origami-Submissions-Singapore-2016.jpg">
-					<img class="origami-collage-images" src="images/FB-96E-Origami-Submissions-Iran-2016.jpg">
-				</div>
 		</section>
 				
-		<section class="origami-partners">
-			<div class="origami-partners__container">
-				<p class="origami-body-text">Program developed in partnership with Origami USA.</p>
-			<div class="origami-partners__group origami-partners__group--are-featured"><a href="https://origamiusa.org/"><img class="origami-partners__group__logo" src="images/OrigamiUSA-logo.png" alt="OrigamiUSA"></a>
-			</div>
-				<p class="origami-body-text">OrigamiUSA's mission is to share the joy of paper folding, preserve its history, nurture its growth, bring people together and encourage community among paper folders.</p>
-				<p class="origami-body-text">Thanks to Origami USA for their support with origami elephant designs, outreach to the origami community, counting validation, supplying of 40,000 pieces of origami paper and for their support of the 96 elephants campaign. </p>
-				<p class="origami-horizontal-rule origami-horizontal-rule--partner"></p> 
-				<p class="origami-supporting-partners-text">Supporting Partners</p>
-				<a class="origami-supporting-partners"><img src="images/AS-logo.png"></a>
-				<a class="origami-supporting-partners"><img src="images/BoyScouts-logo.png"></a>
-				<a class="origami-supporting-partners"><img src="images/GirlScouts-logo.png"></a>
-				<a class="origami-supporting-partners"><img src="images/tuttlepublishing-logo.png"></a>
-
-				<p class="origami-horizontal-rule origami-horizontal-rule--partner"></p>
-				<p class="origami-body-text">Elephant origami models in photograph created by:<br> Paul Jackson (gray and pink) and Richard Alexander (blue).</p>
-			</div>
-		</section>
-			
 		<footer class="footer">
 			<ul class="menu__social">
 				<li>
@@ -246,58 +248,7 @@
 					Children's Privacy Policy
 				</a>
 			</p>
-		</footer>
-		<div class="origami-screen"></div>
-		<div class="origami-lightbox">
-			<div class="origami-lightbox__content origami-lightbox__content--legal-notice">
-				<h2 class="origami-header">Legal Notice</h2>
-				<p class="origami-body-text">The Elephant origami Challenge (“EYC”) is a voluntary activity undertaken to accomplish the charitable purposes of the Wildlife Conservation Society (“WCS”) by raising awareness and support to save elephants. When undertaking any physical activity, including origami, risk of serious physical injury is possible. Participants in the EYC are advised to carefully consider any health issues and physical conditions that could adversely affect their ability to undertake the EYC safely. WCS makes no representations or warranties regarding the safety or appropriateness of the EYC or any origami activity or poses.</p>
-				<p class="origami-body-text">Individuals participating in the EYC do so at their own election and at their own risk, and by their participation agree (on their own behalf and on behalf of anyone else who might make a claim in their place) to waive, release and discharge WCS, and to indemnify, hold harmless and agree not to sue WCS and/or its officers, directors, trustees, employees, affiliates and representatives for any loss, liability, cost, damages (including reasonable attorney's fees) or other claims that might arise from or in relation to their participation in the EYC, whether due to negligence or otherwise.  Participants are encouraged to consult their health care providers with any questions regarding how the EYC might affect their health, and any Participants under the age of 18 should obtain permission from a parent/guardian.  WCS is not responsible for, and specifically disclaims responsibility for, any loss, injury, liability, cost, damages or other claims arising from or in relation to the EYC.</p>
-			</div>
-			<div class="origami-lightbox__content origami-lightbox__content--privacy-notice">
-				<h2 class="origami-header">ELEPHANT origami CHALLENGE<br>TERMS OF PARTICIPATION</h2>
-				<p class="origami-body-text">The Elephant origami Challenge (the “EYC”) is a voluntary activity undertaken to help advance the charitable goals of the Wildlife Conservation Society (“WCS”) by raising awareness and support to save elephants. You may participate in WCS's EYC by sharing your photograph(s) using the #ElephantorigamiChallenge hashtag (each, a “Post”) on your account on Facebook, Instagram and/or Twitter (each, a “Platform”). By so participating in the EYC, you accept and agree to these Terms of Participation (these “Terms”).  If you are a minor in your jurisdiction of residence (generally, if you are under the age of 18), do not participate unless your parent or legal guardian also agrees to these Terms.</p>
-				<h3 class="origami-sub-header">How WCS May Use Your Post</h3>
-				<p class="origami-body-text">By participating in the EYC, you agree and acknowledge that WCS shall have an unlimited, irrevocable, worldwide right and license, but not the obligation, to use, publicly display, publish, distribute, reproduce, adapt and/or edit your Post (which may include, at WCS's sole discretion, your Platform account name) in any way, in perpetuity, without consideration to you, on any WCS website, including without limitation WCS's EYC website, all for purposes of promoting the conservation mission of WCS and the EYC.</p>
-				<h3 class="origami-sub-header">Post Submission Guidelines</h3>
-				<ol class="origami-list origami-list--is-ordered">
-					<li class="origami-list__item">All Posts must comply with these Terms as well as with the Terms of Use, Privacy Policy and Children's Privacy Policy on the WCS website (www.wcs.org).</li>  
-					<li class="origami-list__item">You must be the owner of any Post you submit, and all Posts must be your original work.  Posts may not have been published previously or have won any previous contests or awards.</li>
-					<li class="origami-list__item">Posts may not infringe or violate any third-party personal, proprietary or other right or advertise or promote any brand or product of any kind.  Specifically and without limitation, Posts may not, without permission for which you can provide written evidence satisfactory to WCS, contain:
-						<ul class="origami-list origami-list--is-unordered"> 
-							<li class="origami-list__item">copyrighted materials, such as but not limited to artwork or images, owned by others;</li>
-							<li class="origami-list__item">trademarks, logos or trade dress owned by others;</li>
-							<li class="origami-list__item">personally identifiable information relating to any person other than yourself, such as personal names, email addresses, street addresses, license plates, etc.; or</li>
-							<li class="origami-list__item">names, likenesses, photographs or other indicia identifying any person, living or dead, besides yourself.</li>
-						</ul>
-					</li>
-					<li class="origami-list__item">Posts shall not defame, misrepresent or contain disparaging or untrue remarks about WCS or any other persons or entities.</li>
-					<li class="origami-list__item">Posts must be suitable for publication and appropriate for a general audience.  Specifically and without limitation:
-						<ul class="origami-list origami-list--is-unordered"> 
-							<li class="origami-list__item">Posts may not be obscene, offensive, indecent, sexually explicit or suggestive; profane or pornographic; violent; or derogatory toward any ethnic, racial, gender, religious or age group, or any other group protected under law.</li>
-							<li class="origami-list__item">Posts may not endorse any form of hate or hate group.</li> 
-							<li class="origami-list__item">Posts may not promote alcohol, illegal drugs, tobacco, firearms/weapons (or the use of any of the foregoing), any activities that may appear unsafe or dangerous, or any particular political agenda or message.</li>
-						</ul>
-					</li>
-					<li class="origami-list__item">Posted photographs may not be digitally enhanced, altered or manipulated such that they are no longer an authentic and accurate representation of the subject matter of the image.</li>
-					<li class="origami-list__item">Posts may not depict anything that may be considered to be in, , and cannot themselves be in, violation of any law.</li>
-				</ol>
-				<h3 class="origami-sub-header">Representations and Warranties</h3>
-				<p class="origami-body-text">By participating in the EYC, you represent and warrant that any Post that you submit is original and that no part of the Post, or WCS's use of your Post as permitted hereunder, will infringe or violate any copyright, trade secret, trademark, patent, invention, or other proprietary or personal right of any third party.  You further represent and warrant that you have obtained any necessary permission from any person whose name or likeness is used in your Post and that your participation in the EYC does not violate any agreement between you and a third party.</p>
-				<h3 class="origami-sub-header">Release and Indemnity</h3>
-				<p class="origami-body-text">AS A CONDITION OF PARTICIPATION IN THE EYC, YOU HEREBY RELEASE AND WAIVE ANY CLAIMS YOU MAY HAVE AGAINST WCS AND ITS AFFILIATES, AND THEIR RESPECTIVE TRUSTEES, OFFICERS, EMPLOYEES AND AGENTS, FOR ANY AND ALL LIABILITY, INJURIES, CLAIMS, DAMAGES, LOSSES, COSTS, OR EXPENSES OF ANY KIND (INCLUDING WITHOUT LIMITATION ATTORNEY'S FEES) OCCURRING IN CONNECTION WITH YOUR PARTICIPATION IN THE EYC OR WCS'S USE OF YOUR POST(S).</p>
-				<p class="origami-body-text">As a further condition of participation, you agree to defend, indemnify and hold harmless WCS and its affiliates, and their respective trustees, officers, employees and agents, against any and all claims occurring in connection with your participation in the EYC or arising out of WCS's use of your Post(s), and if any Post includes a recognizable person or people, claims arising out of WCS's use of the person's likeness as permitted hereunder.  You acknowledge that (a) you will receive no compensation of any kind from WCS in connection with any use by WCS of your Post(s) as permitted hereunder; (b) WCS may, in its sole discretion, for any reason or no reason, use or decline to use any Post(s) submitted by you; and, (c) any disputes arising hereunder will be resolved individually, without resort to any form of class action.</p>
-				<h3 class="origami-sub-header">Governing Law and Jurisdiction</h3>
-				<p class="origami-body-text">The EYC and these Terms shall be governed by and construed in accordance with the laws of the State of New York.  You hereby submit to the jurisdiction and venue of the federal and state courts of New York and waive the right to have disputes arising out of the subject matter hereof adjudicated in any other forum.  The EYC and these Terms are subject to all applicable federal, state and local laws and regulations.</p>  
-				<h3 class="origami-sub-header">Miscellaneous</h3>
-				<p class="origami-body-text">It is your responsibility to comply with the terms of service/use of any Platform you use.  You must be the registered user of the Platform account on which you share your Post; the registered account holder will be deemed the submitter of the Post.  Neither Facebook, Instagram nor Twitter is in any way affiliated with or a sponsor of the EYC. WCS reserves the right in its sole discretion to cancel or modify the EYC at any time without notice.</p>
-			</div>
-			<button class="origami-button origami-lightbox__close-button">
-				<svg class="origami-lightbox__close-button__icon" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-				    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-				</svg>
-			</button>
-		</div>		
+		</footer>	
 		<script>var require = {"baseUrl":"assets","paths":{"application":"assets/application-369a65d8c4cc8133f4669acc59ea70bc"}};</script>
 		<script data-main="application-369a65d8c4cc8133f4669acc59ea70bc" src="assets/require-fa84055c035d644f08f19f75ffd68b53.js"></script>
 	</body>

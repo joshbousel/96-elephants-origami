@@ -21,3 +21,53 @@
 		@extend .origami-body-text;
 	}
 }
+
+.origami-paper-list {
+	margin: 0 0 25px;
+	
+	&__item {
+		cursor: pointer;
+		display: inline-block;
+		height: 135px;
+		margin: 0 15px 0 0;
+		list-style: none;
+		position: relative;
+		width: calc(33% - 30px);
+		
+		&::before {
+		    background: url('#{$image-path}icon-check.png') top left no-repeat;
+			background-size: cover;
+			content: "";
+			height: 0;
+			left: 50%;
+			margin: 0;
+			top: 50%;
+			position: absolute;
+			transition: all 0.2s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+			transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+			width: 0;
+		}
+		
+		&--selected::before {
+			height: 60px;
+			margin: -30px 0 0 -30px;
+			width: 60px;
+		}
+		
+		&--blue {
+			background: $dark-blue;
+		}
+		
+		&--green {
+			background: #2b6c30;
+		}
+		
+		&--red {
+			background: $red;
+		}
+	}
+	
+	&__item:last-of-type {
+		margin: 0;
+	}
+}
