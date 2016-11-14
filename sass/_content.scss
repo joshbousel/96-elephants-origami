@@ -56,14 +56,20 @@
 	
 	.origami-body-text {
 		padding: 0 25px 25px;
+		
+		&--no-bottom-padding {
+			padding: 0 25px;
+		}
 	}
 	
 	.origami-header {
 		color: $red;
+		font-size: 5.25rem;
+		line-height: 4.15rem;
 		padding: 0 0 25px;
 	
 		@media all and (max-width:$break-tablet) {
-			font-size: 4.5rem;
+			font-size: 4rem;
 			padding: 0 0 15px;
 		}
 	}
@@ -81,6 +87,10 @@
 	.origami-share--image {
 		height: auto;
 		width: 100%;
+	}
+	
+	.origami-sub-header {
+		margin: 0 0 25px;
 	}
 	
 	&__video {

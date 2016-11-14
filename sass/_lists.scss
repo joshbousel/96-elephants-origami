@@ -23,16 +23,21 @@
 }
 
 .origami-paper-list {
-	margin: 0 0 25px;
+	padding: 10px 0 0;
+	margin: 0 25px 25px;
+	
+	&--error {
+		    border: 2px solid #c12e32;
+	}
 	
 	&__item {
 		cursor: pointer;
 		display: inline-block;
-		height: 135px;
+		height: 125px;
 		margin: 0 15px 0 0;
 		list-style: none;
 		position: relative;
-		width: calc(33% - 30px);
+		width: calc(33% - 20px);
 		
 		&::before {
 		    background: url('#{$image-path}icon-check.png') top left no-repeat;

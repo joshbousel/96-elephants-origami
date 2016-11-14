@@ -7,7 +7,12 @@ $(function(){
 	var foldingPlayer;
 	var imgUrl;
 	var facebookShareUrl;
+	var isMobile = false;
 
+	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+	    isMobile = true;
+	    }
+	    
 	//Origami Pledge Submission
 	$('.origami-form__panel--first .origami-button').on('click',function(e) {
 		e.preventDefault();
@@ -97,6 +102,7 @@ $(function(){
 			errorCount++;
 			}
 		if (color == '') {
+			$('.origami-paper-list').addClass('origami-paper-list--error');
 			errorCount++;
 			}
 		if (errorCount != 0) {
@@ -105,7 +111,10 @@ $(function(){
 			}
 		else {
 			imgUrl = 'http://iwizz4823.imagewizz.com/A010B7C58D4E97300D427E25103A0354/'+$elephant.val();
-			facebookShareUrl = 'https://www.facebook.com/dialog/feed?app_id=966242223397117&link=http%3A%2F%2Fpages.96elephants.org%2Forigami-dev%2F&picture='+imgUrl+'&name=Join%20the%20Fold&caption=%20&description=Meet%20my%20origami%20elephant%2C%20'+$elephant.val()+'.%20It%20represents%20one%20of%2096%2C000%20elephants%20that%20will%20be%20killed%20in%20Africa%20over%20the%20next%20three%20years%20for%20their%20ivory.%20Join%20the%20fold%20to%20help%20protect%20elephants%20by%20creating%20your%20own%20origami%20elephant%20now.&redirect_uri=http%3A%2F%2Fwww.facebook.com%2F&display=popup';
+			imgUrl = imgUrl.replace(' ','');
+			imgUrl = imgUrl.replace('+','');
+			
+			facebookShareUrl = 'https://www.facebook.com/dialog/feed?app_id=966242223397117&link=http%3A%2F%2Fpages.96elephants.org%2Forigami%2F&picture='+imgUrl+'&name=Join%20the%20Fold&caption=%20&description=Meet%20my%20origami%20elephant%2C%20'+$elephant.val()+'.%20It%20represents%20one%20of%20the%2096%20elephants%20who%20are%20killed%20every%20day%20in%20Africa%20for%20their%20ivory.%20Create%20your%20own%20digital%20ellie%20and%20join%20%4096Elephants%20to%20stop%20the%20poaching%20crisis.%20&redirect_uri=http%3A%2F%2Fwww.facebook.com%2F&display=popup';
 			
 			var url = 'http://e.wcs.org/site/Survey?cons_info_component=t&cons_email='+$email.val()+'&cons_first_name='+$first.val()+'&cons_last_name='+$last.val()+'&3255_15229_2_11855='+imgUrl+'&SURVEY_ID=15229&ACTION_SUBMIT_SURVEY_RESPONSE=Submit';				
 			url = encodeURI(url)
@@ -119,14 +128,35 @@ $(function(){
 					
 					$('.origami-share--image').attr('src',imgUrl);
 					$('.origami-share--facebook').attr('href',facebookShareUrl);
-					$('.origami-form__panel--second').removeClass('origami-form__panel--active');
-					$('.origami-form__panel--third').addClass('origami-form__panel--active');
 					$('html, body').animate({ scrollTop: offset.top }, 250);
-					foldingPlayer.mute();
-					foldingPlayer.playVideo();
+					$('.origami-form__panel--second').removeClass('origami-form__panel--active');
+					
+					if (isMobile) {
+						$('.origami-form__panel--fourth').addClass('origami-form__panel--active');
+					} else {
+						$('.origami-form__panel--third').addClass('origami-form__panel--active');
+						loadAndPlayFoldingVideo(color);	
+					}
 				});
 			}
 		});	
+	
+	function loadAndPlayFoldingVideo(color) {
+		var videoID = 'wAEo0n3JA5A';
+		
+		if (color == 'green') {
+			videoID = '7pyISdjp-X8'
+		} else if (color == 'blue') {
+			videoID = 'trR04GBpl9E'
+		}
+		
+		console.log(color);
+		console.log(videoID);
+		
+		foldingPlayer.loadVideoById(videoID);
+		foldingPlayer.mute();
+		foldingPlayer.playVideo();
+	}
 	
 	function showFourthPanel() {
 		$('.origami-form__panel--third').removeClass('origami-form__panel--active');
@@ -151,7 +181,8 @@ $(function(){
 	function onYouTubeIframeAPIReady() {
 	    exhibitPlayer = new YT.Player('exhibitVideo', {
 	        events: {
-	            'onReady': onPlayerReady
+	            'onReady': onPlayerReady,
+	            'onStateChange': onExhibitPlayerStateChange
 	        }
 	    });
 	    
@@ -176,6 +207,12 @@ $(function(){
 	function onIntroPlayerReady(event) {
 	    introPlayer.mute();
 	    introPlayer.playVideo();
+	}
+	
+	function onExhibitPlayerStateChange(event) {
+		if(event.data === 0) {          
+	    	exhibitPlayer.playVideo();
+	    }
 	}
 	
 	function onPlayerStateChange(event) {        
