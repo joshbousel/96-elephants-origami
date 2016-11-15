@@ -110,7 +110,15 @@ $(function(){
 			$('html, body').animate({ scrollTop: offset.top }, 250);
 			}
 		else {
-			imgUrl = 'http://iwizz4823.imagewizz.com/A010B7C58D4E97300D427E25103A0354/'+$elephant.val();
+			imgUrl = 'http://iwizz4823.imagewizz.com/A010B7C58D4E97300D427E25103A0354/';
+			
+			if (color == 'green') {
+				imgUrl = 'http://iwizz4823.imagewizz.com/1157C3E629648C5BD65FF134E37910DB/';
+			} else if (color == 'blue') {
+				imgUrl = 'http://iwizz4823.imagewizz.com/03C1D92EADE5D94AFFB66ED4D6429D7B/';
+			}
+			
+			imgUrl = imgUrl+$elephant.val();
 			imgUrl = imgUrl.replace(' ','');
 			imgUrl = imgUrl.replace('+','');
 			
@@ -142,16 +150,13 @@ $(function(){
 		});	
 	
 	function loadAndPlayFoldingVideo(color) {
-		var videoID = 'wAEo0n3JA5A';
+		var videoID = 'gee97dz6SwQ';
 		
 		if (color == 'green') {
-			videoID = '7pyISdjp-X8'
+			videoID = 'qDOpPxp787s'
 		} else if (color == 'blue') {
-			videoID = 'trR04GBpl9E'
+			videoID = 'l0DfZ0ANy_g'
 		}
-		
-		console.log(color);
-		console.log(videoID);
 		
 		foldingPlayer.loadVideoById(videoID);
 		foldingPlayer.mute();

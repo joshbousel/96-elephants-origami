@@ -31,6 +31,7 @@
 	}
 	
 	&__item {
+		border: 1px solid rgba(0,0,0,.15);
 		cursor: pointer;
 		display: inline-block;
 		height: 125px;
@@ -38,6 +39,10 @@
 		list-style: none;
 		position: relative;
 		width: calc(33% - 20px);
+		
+		@media all and (max-width:$break-tablet) {
+			height: 90px;
+		}
 		
 		&::before {
 		    background: url('#{$image-path}icon-check.png') top left no-repeat;
@@ -60,15 +65,15 @@
 		}
 		
 		&--blue {
-			background: $dark-blue;
+			background: #0073c0;
 		}
 		
 		&--green {
-			background: #2b6c30;
+			background: #27c50a;
 		}
 		
 		&--red {
-			background: $red;
+			background: #ad0401;
 		}
 	}
 	
