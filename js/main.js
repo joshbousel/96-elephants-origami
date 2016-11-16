@@ -2,17 +2,40 @@ $(function(){
 	window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
 
 	var $htmlBody = $('html, body');
+	var $win = $(window);
 	var exhibitPlayer;
 	var introPlayer;
 	var foldingPlayer;
 	var imgUrl;
 	var facebookShareUrl;
+	var playerTimer;
 	var isMobile = false;
+	var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
 	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 	    isMobile = true;
 	    }
-	    
+	   
+	if (isSafari) {
+		$('.origami-content__video').addClass('origami-content__video--has-background');
+		$('.origami-content__video__frame').hide();
+	}
+	
+	//Fix the position of footer on larger screens	
+	function fixedFooter() {
+		if ($('.origami-content').outerHeight() + $('.footer').outerHeight() < $win.height()) {
+			$('.footer').addClass('footer--is-fixed');
+		} else {
+			$('.footer').removeClass('footer--is-fixed');
+		}
+	}
+	
+	fixedFooter();
+	
+	$win.on('resize',function(){
+		fixedFooter();
+	});
+	
 	//Origami Pledge Submission
 	$('.origami-form__panel--first .origami-button').on('click',function(e) {
 		e.preventDefault();
@@ -184,12 +207,14 @@ $(function(){
 
 	//YouTube Video API
 	function onYouTubeIframeAPIReady() {
-	    exhibitPlayer = new YT.Player('exhibitVideo', {
-	        events: {
-	            'onReady': onPlayerReady,
-	            'onStateChange': onExhibitPlayerStateChange
-	        }
-	    });
+	    if (!isMobile) {
+		    exhibitPlayer = new YT.Player('exhibitVideo', {
+		        events: {
+		            'onReady': onPlayerReady,
+		            'onStateChange': onExhibitPlayerStateChange
+		        }
+		    });
+		}
 	    
 	    introPlayer = new YT.Player('introVideo', {
 	        events: {
@@ -204,14 +229,26 @@ $(function(){
 	    });
 	}
 	
+	function checkTime() {
+	   if ( exhibitPlayer.getCurrentTime() >= 1 ) {
+	      clearInterval(playerTimer);
+	      exhibitPlayer.pauseVideo();
+		} else {
+	      playerTimer = setInterval(checkTime, 500);
+		}
+	}
+	
 	function onPlayerReady(event) {
 	    exhibitPlayer.mute();
 	    exhibitPlayer.playVideo();
+	    checkTime();
 	}	
 	
 	function onIntroPlayerReady(event) {
-	    introPlayer.mute();
-	    introPlayer.playVideo();
+	    if (!isMobile) {
+		    introPlayer.mute();
+		    introPlayer.playVideo();
+		}
 	}
 	
 	function onExhibitPlayerStateChange(event) {

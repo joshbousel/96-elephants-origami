@@ -25,6 +25,11 @@
 			top: 0;
 			width: 100%;
 		}
+		
+		&--has-background {
+			background-image: url('#{$image-path}origami-exhibit.jpg');
+			background-size: cover;
+		}
 	}
 }
 
