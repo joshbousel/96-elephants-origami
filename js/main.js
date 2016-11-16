@@ -173,12 +173,12 @@ $(function(){
 		});	
 	
 	function loadAndPlayFoldingVideo(color) {
-		var videoID = 'gee97dz6SwQ';
+		var videoID = 'JRwXR2IoYEk';
 		
 		if (color == 'green') {
-			videoID = 'qDOpPxp787s'
+			videoID = 'qn2u_3zi1mw'
 		} else if (color == 'blue') {
-			videoID = 'l0DfZ0ANy_g'
+			videoID = 'SUduOhRLzxk'
 		}
 		
 		foldingPlayer.loadVideoById(videoID);
