@@ -131,3 +131,12 @@
 		content: "";
 	}
 }
+.origami-horizontal-rule {
+	border-top: 1px solid #7fb2d0;
+    margin: 25px auto 35px;
+    width: 50%;
+
+	&--partner {
+	    border-top: 1px solid #8e7d64;
+	 }
+}
